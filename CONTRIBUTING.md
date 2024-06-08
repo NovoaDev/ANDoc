@@ -10,7 +10,7 @@ In this case the review will be lighter, only the functionality will be tested a
 
 ### New capabilities or major change implementations. 🥇
 The process will be slower.
-- There should be a prior conversation about the functionality you want to implement, either through [discussions](https://github.com/NovoaDev/replacename/discussions). or within an issue. The point of this is that you don't waste time writing code, which then may not be accepted.
+- There should be a prior conversation about the functionality you want to implement, either through [discussions](https://github.com/NovoaDev/ANDoc/discussions). or within an issue. The point of this is that you don't waste time writing code, which then may not be accepted.
 - Fork the repository.
 - Create a Pull Request with the changes. 
 - The next step is to wait for the approval of the PR, it will be evaluated and approved or rejected.

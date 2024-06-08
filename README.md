@@ -68,3 +68,27 @@ For now, a manual installation is required. In the future, I will create a scrip
 3.  **Follow the Menu:**
     
     The main menu provides options to view, add, remove applications, generate documentation, and set up a local test environment.
+
+## Workflow
+1.  **Add Extensions Path**:
+    -   If extensions are not already included in the ALDoc project, add the path to the extensions.
+    -   ANDoc ensures that projects need to be added to ALDoc only once. Afterward, when documentation is generated, it will automatically refresh the project data.
+  
+2.  **Compile Extensions in AL**:
+    -   Each time a new comment is added using the ALDoc structure, you must compile to ensure that the documentation generation process takes this change into account.
+  
+3.  **Generate Documentation**:
+    -   Generate the documentation using the ANDoc module.
+    -   This process will create/update the necessary files to generate the corresponding documentation.
+    -   The output will be a static page that can be deployed on servers such as Nginx, Apache, etc.
+  
+4.  **Test in Local Environment**:
+    -   Set up a local development environment to preview the documentation.
+    -   This allows for adjustments and changes before deploying to the production server.
+
+5.  **Deploy to Production**:
+    -   Copy the content from the "_site" folder within the designated output directory to your web server.
+
+This workflow ensures a streamlined process for adding extensions, compiling updates, generating up-to-date documentation, setting up a local environment for testing, and deploying the final version to a production server.
+
+![Workflow](/res/Workflow.png)

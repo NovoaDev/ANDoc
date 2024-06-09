@@ -53,6 +53,7 @@ For now, a manual installation is required. In the future, I will create a scrip
     C:\Program Files\WindowsPowerShell\Modules\ANDoc 
     ```
     Ensure that the `ANDoc` folder exists within `Modules`. If not, create it.
+    ![installation01](/res/installation01.png)
     
 3.  **Restart PowerShell:**
     If you have PowerShell open, close and reopen it to ensure the new module is loaded.
@@ -62,8 +63,8 @@ For now, a manual installation is required. In the future, I will create a scrip
     ```powershell
     Get-Module -ListAvailable ANDoc 
     ```
-    You should see `ANDoc` listed in the available modules.
-    
+    You should see `ANDoc` listed in the available modules.<br>
+    ![installation02](/res/installation02.png)
 
 ## Usage 🎛️
 1.  **Open PowerShell as Administrator:**

@@ -110,7 +110,8 @@ function GetOutputPath {
     if (-not $configData.OutputPath -or $configData.OutputPath -eq "") {
         Write-Host "OutputPath not found or is empty in aldoc.yml." -ForegroundColor Yellow
         do {
-            $outputPath = Read-Host "Please enter the output path"
+            Write-Host "Please select the output path:" -ForegroundColor White
+            $outputPath = GetFolder "Please select the output path"
             if ($outputPath -eq "") {
                 Write-Host "Output path cannot be empty. Please enter a valid path." -ForegroundColor Red
             }
@@ -143,6 +144,24 @@ function InitialConfiguration {
     Write-Host "OutputPath is set to: $outputPath" -ForegroundColor Green
 
     Write-Host "Initial configuration completed successfully." -ForegroundColor Green
+}
+
+function GetFolder {
+    param (
+        [string]$DialogDescription
+    )
+    
+    [void] [System.Reflection.Assembly]::LoadWithPartialName('System.windows.forms')
+
+    $FolderSelection = New-Object System.Windows.Forms.FolderBrowserDialog
+    $FolderSelection.Description = $DialogDescription
+
+    $TopmostForm = New-Object System.Windows.Forms.Form
+    $TopmostForm.TopMost = $true
+    $TopmostForm.MinimizeBox = $true
+
+    $FolderSelection.ShowDialog($TopmostForm) | Out-Null
+    return $FolderSelection.SelectedPath
 }
 
 function GenerateDocumentation {
@@ -218,7 +237,8 @@ function AddApplicationToConfiguration {
     }
 
     do {
-        $AppPath = Read-Host "Enter the path to the .app file"
+        Write-Host "Please select the path to the .app file:" -ForegroundColor White
+        $AppPath = GetFolder "Please select the path to the .app file"
         if ($AppPath -eq "") {
             Write-Host "Application path cannot be empty. Please enter a valid path." -ForegroundColor Red
         } elseif (-not (Test-Path $AppPath)) {

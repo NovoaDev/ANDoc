@@ -37,7 +37,7 @@ For now, a manual installation is required. In the future, I will create a scrip
 2.  **Copy the Module:**
     Copy the `ANDoc.psm1` file to the following directory:
     ``` makefile
-    `C:\Program Files\WindowsPowerShell\Modules\ANDoc` 
+    C:\Program Files\WindowsPowerShell\Modules\ANDoc 
     ```
     Ensure that the `ANDoc` folder exists within `Modules`. If not, create it.
     

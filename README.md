@@ -36,9 +36,9 @@ For now, a manual installation is required. In the future, I will create a scrip
     
 2.  **Copy the Module:**
     Copy the `ANDoc.psm1` file to the following directory:
-    makefile
-    Copiar código
+    ``` makefile
     `C:\Program Files\WindowsPowerShell\Modules\ANDoc` 
+    ```
     Ensure that the `ANDoc` folder exists within `Modules`. If not, create it.
     
 3.  **Restart PowerShell:**
@@ -46,9 +46,9 @@ For now, a manual installation is required. In the future, I will create a scrip
     
 4.  **Verify Installation:**
     Open PowerShell with administrative privileges and run:
-    powershell
-    Copiar código
-    `Get-Module -ListAvailable ANDoc` 
+    ```powershell
+    Get-Module -ListAvailable ANDoc 
+    ```
     You should see `ANDoc` listed in the available modules.
     
 
@@ -59,12 +59,9 @@ For now, a manual installation is required. In the future, I will create a scrip
     
 2.  **Run the Module:**
     
-    powershell
-    
-    Copiar código
-    
-    `ANDoc` 
-    
+    ```powershell
+    ANDoc 
+    ```
 3.  **Follow the Menu:**
     
     The main menu provides options to view, add, remove applications, generate documentation, and set up a local test environment.

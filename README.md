@@ -12,7 +12,7 @@ WIP
 https://youtu.be/ut9oV-DECrY<br>
 
 The usage of this tool involves adding extensions to the list for generating documentation, compiling updates in the related BC projects, generating updated documentation, setting up a local environment for testing, checking that everything is correct, and deploying the final version to the documentation server.<br><br>
-![Workflow](/res/Workflow.png) 
+![workflow01](/res/workflow01.png) 
 
 ## Features ✨
 ### Configuration Management ⚙️
@@ -21,14 +21,14 @@ The usage of this tool involves adding extensions to the list for generating doc
 -   **View List of Added Applications:** Displays a list of all applications currently included in the `aldoc.yml` configuration file, allowing users to easily manage their documentation scope.
 <br><br>
 
-![ConfigurationManagement1](/res/ConfigurationManagement1.png)<br>
-![ConfigurationManagement2](/res/ConfigurationManagement2.png)<br>
+![configurationManagement01](/res/configurationManagement01.png)<br>
+![configurationManagement02](/res/configurationManagement02.png)<br>
 
 **Note:** The first time you add an application path to the yml file, you will be prompted to specify the OutputPath. This will be the output folder where all files will be extracted. This prompt will only appear the first time you add an extension; afterwards, it will automatically work with the specified OutputPath. If you need to change it, you can do so directly in the yml file. 
 
 
-![ConfigurationManagement3](/res/ConfigurationManagement3.png)<br>
-![ConfigurationManagement4](/res/ConfigurationManagement4.png)
+![configurationManagement03](/res/configurationManagement03.png)<br>
+![configurationManagement04](/res/configurationManagement04.png)
 
 ### Documentation Generation 📝
 Builds and generates documentation for the specified application paths using ALDoc and DocFX. This feature ensures that the documentation is up-to-date and accurately reflects the current state of the applications.
@@ -76,7 +76,7 @@ For now, a manual installation is required. In the future, I will create a scrip
     ANDoc 
     ```
 
-    ![Usage1](/res/Usage1.png)
+    ![usage01](/res/usage01.png)
 
 3.  **Follow the Menu:**
     
@@ -88,10 +88,10 @@ For now, a manual installation is required. In the future, I will create a scrip
     -   ANDoc ensures that projects need to be added to ALDoc only once. Afterward, when documentation is generated, it will automatically refresh the project data.
 
 
-    ![Usage2](/res/Usage2.png) <br>
-    ![Usage3](/res/Usage3.png) <br><br>
+    ![usage02](/res/usage02.png) <br>
+    ![usage03](/res/usage03.png) <br><br>
     **Note:** We can check the extensions added to the list using option 1 in the menu.<br>
-    ![Usage4](/res/Usage4.png)
+    ![usage04](/res/usage04.png)
 
 1.  **Compile Extensions in AL**:
     -   Each time a new comment is added using the ALDoc structure, you must compile to ensure that the documentation generation process takes this change into account.
@@ -102,17 +102,17 @@ For now, a manual installation is required. In the future, I will create a scrip
     -   The output will be a static page that can be deployed on servers such as Nginx, Apache, etc.
 
 
-    ![Usage5](/res/Usage5.png) <br><br>
+    ![usage05](/res/usage05.png) <br><br>
     It will export the files to the output folder specified when adding the first extension to the list (OutputPath key in the yml). <br>
-    ![Usage6](/res/Usage6.png)
+    ![usage06](/res/usage06.png)
 
 3.  **Test in Local Environment**:
     -   Set up a local development environment to preview the documentation.
     -   This allows for adjustments and changes before deploying to the production server.
   
 
-    ![Usage7](/res/Usage7.png) <br>
-    ![Usage8](/res/Usage8.png)
+    ![usage07](/res/usage07.png) <br>
+    ![usage08](/res/usage08.png)
 
 4.  **Deploy to Production**:
     -   Copy the content from the "_site" folder within the designated output directory to your web server.

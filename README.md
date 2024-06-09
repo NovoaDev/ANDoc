@@ -11,11 +11,24 @@ WIP
 **Usage video(ESP):** <br> 
 https://youtu.be/ut9oV-DECrY<br>
 
+The usage of this tool involves adding extensions to the list for generating documentation, compiling updates in the related BC projects, generating updated documentation, setting up a local environment for testing, checking that everything is correct, and deploying the final version to the documentation server.<br><br>
+![Workflow](/res/Workflow.png) 
+
 ## Features ✨
 ### Configuration Management ⚙️
 -   **Add Application to Configuration:** Allows users to add a new application path to the `aldoc.yml` configuration file. This enables the documentation generation process to include the specified applications.
 -   **Remove Application from Configuration:** Provides an option to remove an existing application from the `aldoc.yml` configuration file, ensuring that only relevant applications are documented.
 -   **View List of Added Applications:** Displays a list of all applications currently included in the `aldoc.yml` configuration file, allowing users to easily manage their documentation scope.
+<br><br>
+
+![ConfigurationManagement1](/res/ConfigurationManagement1.png)<br>
+![ConfigurationManagement2](/res/ConfigurationManagement2.png)<br>
+
+**Note:** The first time you add an application path to the yml file, you will be prompted to specify the OutputPath. This will be the output folder where all files will be extracted. This prompt will only appear the first time you add an extension; afterwards, it will automatically work with the specified OutputPath. If you need to change it, you can do so directly in the yml file. 
+
+
+![ConfigurationManagement3](/res/ConfigurationManagement3.png)<br>
+![ConfigurationManagement4](/res/ConfigurationManagement4.png)
 
 ### Documentation Generation 📝
 Builds and generates documentation for the specified application paths using ALDoc and DocFX. This feature ensures that the documentation is up-to-date and accurately reflects the current state of the applications.
@@ -62,6 +75,9 @@ For now, a manual installation is required. In the future, I will create a scrip
     ```powershell
     ANDoc 
     ```
+
+    ![Usage1](/res/Usage1.png)
+
 3.  **Follow the Menu:**
     
     The main menu provides options to view, add, remove applications, generate documentation, and set up a local test environment.
@@ -70,22 +86,33 @@ For now, a manual installation is required. In the future, I will create a scrip
 1.  **Add Extensions Path**:
     -   If extensions are not already included in the ALDoc project, add the path to the extensions.
     -   ANDoc ensures that projects need to be added to ALDoc only once. Afterward, when documentation is generated, it will automatically refresh the project data.
-  
-2.  **Compile Extensions in AL**:
+
+
+    ![Usage2](/res/Usage2.png) <br>
+    ![Usage3](/res/Usage3.png) <br><br>
+    **Note:** We can check the extensions added to the list using option 1 in the menu.<br>
+    ![Usage4](/res/Usage4.png)
+
+1.  **Compile Extensions in AL**:
     -   Each time a new comment is added using the ALDoc structure, you must compile to ensure that the documentation generation process takes this change into account.
   
-3.  **Generate Documentation**:
+2.  **Generate Documentation**:
     -   Generate the documentation using the ANDoc module.
     -   This process will create/update the necessary files to generate the corresponding documentation.
     -   The output will be a static page that can be deployed on servers such as Nginx, Apache, etc.
-  
-4.  **Test in Local Environment**:
+
+
+    ![Usage5](/res/Usage5.png) <br><br>
+    It will export the files to the output folder specified when adding the first extension to the list (OutputPath key in the yml). <br>
+    ![Usage6](/res/Usage6.png)
+
+3.  **Test in Local Environment**:
     -   Set up a local development environment to preview the documentation.
     -   This allows for adjustments and changes before deploying to the production server.
+  
 
-5.  **Deploy to Production**:
+    ![Usage7](/res/Usage7.png) <br>
+    ![Usage8](/res/Usage8.png)
+
+4.  **Deploy to Production**:
     -   Copy the content from the "_site" folder within the designated output directory to your web server.
-
-This workflow ensures a streamlined process for adding extensions, compiling updates, generating up-to-date documentation, setting up a local environment for testing, and deploying the final version to a production server.
-
-![Workflow](/res/Workflow.png)
